@@ -23,6 +23,15 @@ class Index extends Component {
     let res = await axios.post(url, payload)
     console.log(res.data)
   }
+  async update () {
+    const url = 'https://h2glrzzai2.execute-api.ap-south-1.amazonaws.com/dev'
+    const payload = {
+      name: 'update',
+      data: { id: '10056', name: 'test', mobile: '98765678' }
+    }
+    let res = await axios.post(url, payload)
+    console.log(res.data)
+  }
   componentDidMount () {
     this.getData()
   }
